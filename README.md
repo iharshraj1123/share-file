@@ -8,9 +8,9 @@ You can share the whole folder, but it works only for PCs not phones.
 
 # How to Use
 
-**When you are on the host PC (the pc on which server is hosted, url contains localhost).**
-
 - Share.php = index.php, its the front end for the app.
+
+**When you are on the host PC (the pc on which server is hosted, url contains localhost).**
 
 - In File sharing mode, Click on browse, copy paste the local address of the folder that contains the files you want to share. eg, "D:/games/". Then select all those files. Hit upload.
 
