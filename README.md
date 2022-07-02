@@ -4,7 +4,7 @@
 
 Simply share files between computers in a LAN, or through tunnelling, or simply hosting on some server.
 
-You can share the whole folder, but it works only for PCs not phones.
+You can share the whole files or whole folder, but folders can be uploaded only from a PC phone browsers have not allowed such features yet (webkitdirectory).
 
 # How to Use
 
