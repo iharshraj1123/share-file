@@ -12,7 +12,9 @@ You can share the whole folder, but it works only for PCs not phones.
 
 - Requirements: PHP, MySQL, php.ini setup so server can access C:/ and D:/ drives using "/c:/" and "/d:/".
 
-- Copy paste the sql in sharefile.sql.
+- Just use XAMPP for PHP and MySQL, its much easier and you get phpmyadmin in the bundle as well.
+
+- Copy paste the sql from sharefile.sql.
 
 **When you are on the host PC (the pc on which server is hosted, url contains localhost).**
 
