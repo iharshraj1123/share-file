@@ -39,7 +39,8 @@ You can share the whole folder, but it works only for PCs not phones.
 # Setting up httpd.conf
 
 - under ```"<Directory "C:/xampp/htdocs">...</Directory>"```, add:
-```<Directory "D:/">
+```
+<Directory "D:/">
     Options Indexes FollowSymLinks Includes ExecCGI
     AllowOverride All
     Require all granted
