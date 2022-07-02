@@ -6,6 +6,9 @@ Simply share files between computers in a LAN, or through tunnelling, or simply 
 
 You can share the whole files or whole folder, but folders can be uploaded only from a PC phone browsers have not allowed such features yet (webkitdirectory).
 
+**Note** : The setup is a bit complex because I want to save space as much as possible. Which is more important, doing something complex once or having the pain of less space.
+I allow the server to access d:/ and c:/ cuz we dont want to reupload something thats already on the server while sharing, why not simply use that?
+
 # Requirements:
 
 - (optional) basic knowledge of php, mysql and apache servers.
