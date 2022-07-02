@@ -27,3 +27,36 @@ You can share the whole folder, but it works only for PCs not phones.
 **When you are on Some PC on the network**
 
 - Simply upload the files/folders, no need to copy paste addresses.
+
+# Setting up PHP.ini
+
+- max_input_time=60
+- memory_limit=1500M
+- post_max_size=5000M
+- upload_max_filesize=5000M
+- max_file_uploads=20000
+
+# Setting up httpd.conf
+
+- under "<Directory "C:/xampp/htdocs">...</Directory>", add:
+```<Directory "D:/">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+</Directory>
+<Directory "C:/">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+- inside "<IfModule alias_module>" do:
+  
+``` 
+  <IfModule alias_module>
+    ....
+    ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
+    Alias "/d:" "D:/"
+    Alias "/c:" "C:/"
+  </IfModule>
+```
