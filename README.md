@@ -8,7 +8,7 @@ You can share the whole folder, but it works only for PCs not phones.
 
 # How to Use
 
-- Share.php = index.php, its the front end for the app.
+- Share.php is the front end for the app.
 
 - Requirements: PHP, MySQL, setup php.ini and httpd.conf so server can access C:/ and D:/ drives using "/c:/" and "/d:/". (More about this is below)
 
