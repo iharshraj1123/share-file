@@ -66,9 +66,9 @@
     <div class="main2">
         <h1>Upload:</h1>
         <label for="cars">Upload Type:</label>
-        <select name="cars" id="uploadType">
-            <option onclick="file_type()" value="file">Files</option>
-            <option onclick="folder_type()" value="folder">Folder</option>
+        <select name="cars" id="uploadType" onchange="select_change()">
+            <option value="file">Files</option>
+            <option value="folder">Folder</option>
         </select>
         <br><br>
         <div class="buttons">
@@ -96,15 +96,6 @@
     </div>
     
     </div>
-    <!-- 
-    <script type="module">
-        import { downloadZip } from "/client-zip-master/src/index.ts"
-    </script> 
-    <script type="text/javascript" src="/jszip/dist/jszip.min.js"></script> 
-    -->
-    <script>
-
-    </script>
     <script>
         let is_localhost = window.location.href.includes("http://localhost")
         let input= document.getElementById("location")
@@ -112,26 +103,6 @@
         let upload_type = document.getElementById("uploadType").value;
         let input_btn = document.getElementById("select-input")
 
-        function t(){
-            // var zip = new JSZip();
-            // zip.folder("/others")
-            // zip.generateAsync({type:"blob"})
-            // .then(function (blob) {
-            //     saveAs(blob, "download.zip");
-            // });
-            // let new_loc = purify(input.value);
-            // new_loc = absolute_pc_path(new_loc);
-            // let folder_name = new_loc.split(/[\\/]/)[new_loc.split(/[\\/]/).length - 2] + `[${Date.now()}]` + ".zip"
-            // let xmlhttp=new XMLHttpRequest();
-            // xmlhttp.open("POST","backend.php",true);
-            // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            // xmlhttp.send(`work=d&location=${new_loc}&folder_name=${folder_name}`);
-            // xmlhttp.onreadystatechange = function () {
-            //     if (this.readyState == 4 && this.status == 200) {
-            //         console.log(xmlhttp.responseText)
-            //     }
-            // }
-        }
         function absolute_pc_path(x){
             x = x.replace("\\c:\\","C:\\")
             x = x.replace("\\d:\\","D:\\")
@@ -141,6 +112,11 @@
         if(upload_type === "file") file_type()
         else folder_type()
 
+        function select_change(){
+            upload_type = document.getElementById("uploadType").value;
+            if(upload_type === "file") file_type()
+            else folder_type()
+        }
         function file_type(){
             upload_type = "file"
             input_btn.webkitdirectory = false
@@ -215,7 +191,7 @@
             console.log("downloaded")
         }
 
-        function upload(){
+        async function upload(){
             if(document.getElementById('location').value != '' && document.getElementById('select-input').value != '' && is_localhost){
                 if(upload_type === "file") normal_upload()
                 else normal_upload2()
