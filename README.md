@@ -10,6 +10,10 @@ You can share the whole folder, but it works only for PCs not phones.
 
 - Share.php = index.php, its the front end for the app.
 
+- Requirements: PHP, MySQL, php.ini setup so server can access C:/ and D:/ drives using "/c:/" and "/d:/".
+
+- Copy paste the sql in sharefile.sql.
+
 **When you are on the host PC (the pc on which server is hosted, url contains localhost).**
 
 - In File sharing mode, Click on browse, copy paste the local address of the folder that contains the files you want to share. eg, "D:/games/". Then select all those files. Hit upload.
