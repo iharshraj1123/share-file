@@ -25,6 +25,8 @@ I allow the server to access d:/ and c:/ cuz we dont want to reupload something 
 
 - Copy paste the sql from sharefile.sql.
 
+- Note: if the copy pasting local addresses seems more of a pain then reuploading whats already on the server to you, simply access this app not using localhost but your local ip address. Or if u know javascript, simply look for places where "includes("localhost")" is present and edit them as per your needs.
+
 **When you are on the host PC (the pc on which server is hosted, url contains localhost).**
 
 - In File sharing mode, Click on browse, copy paste the local address of the folder that contains the files you want to share. eg, "D:/games/". Then select all those files. Hit upload.
