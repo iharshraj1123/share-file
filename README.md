@@ -10,7 +10,7 @@ You can share the whole files or whole folder, but folders can be uploaded only 
 
 - (optional) basic knowledge of php, mysql and apache servers.
 
-- PHP, MySQL. 
+- PHP with apache, MySQL. 
 
 - Just use XAMPP for PHP and MySQL, its much easier and you get phpmyadmin in the bundle as well.
 
