@@ -6,13 +6,17 @@ Simply share files between computers in a LAN, or through tunnelling, or simply 
 
 You can share the whole files or whole folder, but folders can be uploaded only from a PC phone browsers have not allowed such features yet (webkitdirectory).
 
+# Requirements:
+
+- PHP, MySQL. 
+
+- Just use XAMPP for PHP and MySQL, its much easier and you get phpmyadmin in the bundle as well.
+
+- setup php.ini and httpd.conf so server can access C:/ and D:/ drives using "/c:/" and "/d:/". (More about this is in #Setting up PHP.ini and #Setting up httpd.conf)
+
 # How to Use
 
 - Share.php is the front end for the app.
-
-- Requirements: PHP, MySQL, setup php.ini and httpd.conf so server can access C:/ and D:/ drives using "/c:/" and "/d:/". (More about this is below)
-
-- Just use XAMPP for PHP and MySQL, its much easier and you get phpmyadmin in the bundle as well.
 
 - Copy paste the sql from sharefile.sql.
 
