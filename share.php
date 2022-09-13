@@ -60,7 +60,21 @@
 </head>
 <body>
     <div class="main">
-    <div><?php $localIP = getHostByName(getHostName());echo 'Host local IP Address - <span id="ip-address">'. $localIP . '</span>';?></div>
+    <div><?php 
+    $exec = 'ipconfig | findstr /R /C:"IPv4.*"';
+    exec($exec, $output);
+    $matches=[];
+    foreach ($output as $outputo){
+        preg_match('/\d+\.\d+\.\d+\.\d+/', $outputo, $matcheso);
+        foreach ($matcheso as $matchesoo){
+            array_push($matches,$matchesoo);
+        }
+    }
+    //$localIP = getHostByName(getHostName());
+
+    $localIP = $matches;
+    echo 'Host local IP Address - <span id="ip-address">'. json_encode($localIP)  . '</span>';
+    ?></div>
     
     
     <div class="main2">
