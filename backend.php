@@ -47,7 +47,8 @@ if($work == "a"){
         $loc = str_replace("\\","\\\\",$loc);
         $loc = str_replace("'","\\'",$loc);
         $name = urldecode($files_arr[$x]);
-        $name = basename(str_replace("'","\\'",$name));
+        $name = basename($name);
+        $name = str_replace("'","\\'",$name);
         $file_data = "INSERT INTO `files` (`id`, `name`, `location`, `type`) VALUES (NULL, '$name', '$loc', '$type')";
         $result = $conn->query($file_data);
         echo "file name = $name <br><br>Location: $loc";
